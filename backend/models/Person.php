@@ -27,7 +27,8 @@ class Person extends \yii\db\ActiveRecord
         return [
             [['phone'], 'integer'],
             [['birth_date'], 'safe'],
-            [['name', 'email'], 'string', 'max' => 15],
+            [['name', 'email'], 'string'],
+            ['email', 'email'],
             [['about'], 'string', 'max' => 300],
             [['name', 'email', 'phone','birth_date'], 'required'],
         ];
